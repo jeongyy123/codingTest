@@ -7,17 +7,18 @@ public class RepeatString {
         Scanner scanner = new Scanner(System.in);
 
         int t = scanner.nextInt();
-        int i = 0;
-        StringBuilder result;
+        scanner.nextLine();
 
-        while (i < t) {
+        for (int i = 0; i < t; i++) {
             int r = scanner.nextInt();
-            result = new StringBuilder(scanner.nextLine());
+            String str = scanner.next();
 
-            for (int j = 0; j < result.length(); j++) {
-                result.insert(result[j].insert)
+            StringBuilder result = new StringBuilder();
+
+            for (char c : str.toCharArray()) {
+                result.append(String.valueOf(c).repeat(r));
             }
-            i++;
+            System.out.println(result.toString());
         }
     }
 }
