@@ -9,18 +9,8 @@ public class Sangsu {
         int num1 = scanner.nextInt();
         int num2 = scanner.nextInt();
 
-        System.out.println(biggerNumber(num1, num2));
+        int max = Math.max(Integer.parseInt(new StringBuilder(String.valueOf(num1)).reverse().toString()), Integer.parseInt(new StringBuilder(String.valueOf(num2)).reverse().toString()));
+        System.out.println(max);
     }
 
-    public static int biggerNumber(int num1, int num2) {
-        int result = 0;
-        for (int i = 1; i < 3; i++) {
-            if (num1 % 10 * i == num2 % 10 * i) {
-                continue;
-            } else {
-                result = num1 % 10 * i < num2 % 10 * i ? num2 : num1;
-            }
-        }
-        return result;
-    }
 }
