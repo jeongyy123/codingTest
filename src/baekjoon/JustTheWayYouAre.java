@@ -7,13 +7,11 @@ public class JustTheWayYouAre {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        String input = br.readLine();
+        String input = "";
 
-        while (input != null) {
-            String str = br.readLine();
-            bw.write(str+"\n");
+        while ((input = br.readLine()) != null) {
+            bw.write(input + "\n");
+            bw.flush();
         }
-        bw.flush();
-        bw.close();
     }
 }
